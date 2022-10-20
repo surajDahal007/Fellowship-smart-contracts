@@ -3,8 +3,8 @@
 pragma solidity ^0.8.0;
 
 contract cityPoll {
-    
-        struct City{
+
+         struct City{
             string _name;
             uint256 votecount;
         }
@@ -30,8 +30,6 @@ contract cityPoll {
             emit cityadded(name);
            
         }
-
-   
 
         function vote(string memory name) public {
             require(!hasVoted[msg.sender],"Already voted");
